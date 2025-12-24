@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Calculator - Vaishnavi</title>
+    <link rel="stylesheet" href="modern-calculator.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="calculator">
+            <div class="calculator-header">
+                <h1><i class="fas fa-calculator"></i> Modern Calculator</h1>
+                <div class="theme-toggle">
+                    <i class="fas fa-sun" id="theme-icon"></i>
+                </div>
+            </div>
+            
+            <div class="display-container">
+                <div class="display" id="display">
+                    <div class="previous-operand" id="previous-operand"></div>
+                    <div class="current-operand" id="current-operand">0</div>
+                </div>
+                <div class="display-overlay" id="display-overlay"></div>
+            </div>
+
+            <div class="buttons-grid">
+                <!-- Row 1 -->
+                <button class="btn btn-function" data-action="clear">
+                    <i class="fas fa-eraser"></i>
+                    <span>C</span>
+                </button>
+                <button class="btn btn-function" data-action="delete">
+                    <i class="fas fa-backspace"></i>
+                    <span>⌫</span>
+                </button>
+                <button class="btn btn-function" data-action="percentage">%</button>
+                <button class="btn btn-operator" data-action="divide">
+                    <i class="fas fa-divide"></i>
+                </button>
+
+                <!-- Row 2 -->
+                <button class="btn btn-number" data-number="7">7</button>
+                <button class="btn btn-number" data-number="8">8</button>
+                <button class="btn btn-number" data-number="9">9</button>
+                <button class="btn btn-operator" data-action="multiply">
+                    <i class="fas fa-times"></i>
+                </button>
+
+                <!-- Row 3 -->
+                <button class="btn btn-number" data-number="4">4</button>
+                <button class="btn btn-number" data-number="5">5</button>
+                <button class="btn btn-number" data-number="6">6</button>
+                <button class="btn btn-operator" data-action="subtract">
+                    <i class="fas fa-minus"></i>
+                </button>
+
+                <!-- Row 4 -->
+                <button class="btn btn-number" data-number="1">1</button>
+                <button class="btn btn-number" data-number="2">2</button>
+                <button class="btn btn-number" data-number="3">3</button>
+                <button class="btn btn-operator" data-action="add">
+                    <i class="fas fa-plus"></i>
+                </button>
+
+                <!-- Row 5 -->
+                <button class="btn btn-number btn-zero" data-number="0">0</button>
+                <button class="btn btn-number" data-number=".">.</button>
+                <button class="btn btn-equals" data-action="calculate">
+                    <i class="fas fa-equals"></i>
+                </button>
+            </div>
+
+            <div class="calculator-footer">
+                <div class="history-toggle" id="history-toggle">
+                    <i class="fas fa-history"></i>
+                    <span>History</span>
+                </div>
+                <div class="memory-display" id="memory-display">
+                    <i class="fas fa-memory"></i>
+                    <span>Memory: 0</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- History Panel -->
+        <div class="history-panel" id="history-panel">
+            <div class="history-header">
+                <h3><i class="fas fa-history"></i> Calculation History</h3>
+                <button class="btn-close" id="history-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="history-list" id="history-list">
+                <!-- History items will be added here -->
+            </div>
+            <div class="history-actions">
+                <button class="btn btn-clear-history" id="clear-history">
+                    <i class="fas fa-trash"></i>
+                    Clear History
+                </button>
+            </div>
+        </div>
+
+        <!-- Memory Panel -->
+        <div class="memory-panel" id="memory-panel">
+            <div class="memory-header">
+                <h3><i class="fas fa-memory"></i> Memory Functions</h3>
+            </div>
+            <div class="memory-buttons">
+                <button class="btn btn-memory" data-memory="mc">
+                    <i class="fas fa-trash"></i>
+                    <span>MC</span>
+                </button>
+                <button class="btn btn-memory" data-memory="mr">
+                    <i class="fas fa-undo"></i>
+                    <span>MR</span>
+                </button>
+                <button class="btn btn-memory" data-memory="ms">
+                    <i class="fas fa-save"></i>
+                    <span>MS</span>
+                </button>
+                <button class="btn btn-memory" data-memory="m+">
+                    <i class="fas fa-plus"></i>
+                    <span>M+</span>
+                </button>
+                <button class="btn btn-memory" data-memory="m-">
+                    <i class="fas fa-minus"></i>
+                    <span>M-</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <script src="modern-calculator.js"></script>
+</body>
+</html>
+
