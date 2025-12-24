@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spice Garden Restaurant - Modern Dining Experience</title>
+    <link rel="stylesheet" href="modern-restaurant.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-utensils"></i>
+                <span>Spice Garden</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#menu" class="nav-link">Menu</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="cart-btn" id="cart-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+                <button class="reservation-btn">Reserve Table</button>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to <span class="highlight">Spice Garden</span></h1>
+            <p class="hero-subtitle">Experience authentic flavors from around the world</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" id="explore-menu">Explore Menu</button>
+                <button class="btn btn-secondary" id="book-table">Book a Table</button>
+            </div>
+        </div>
+        <div class="hero-stats">
+            <div class="stat">
+                <i class="fas fa-star"></i>
+                <span>4.9 Rating</span>
+            </div>
+            <div class="stat">
+                <i class="fas fa-users"></i>
+                <span>1000+ Happy Customers</span>
+            </div>
+            <div class="stat">
+                <i class="fas fa-award"></i>
+                <span>Best Restaurant 2024</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Delicious Menu</h2>
+                <p class="section-subtitle">Carefully crafted dishes made with fresh ingredients</p>
+            </div>
+            
+            <div class="menu-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="appetizers">Appetizers</button>
+                <button class="filter-btn" data-filter="mains">Main Course</button>
+                <button class="filter-btn" data-filter="desserts">Desserts</button>
+                <button class="filter-btn" data-filter="beverages">Beverages</button>
+            </div>
+
+            <div class="menu-grid" id="menu-grid">
+                <!-- Menu items will be dynamically loaded -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Our Story</h2>
+                    <p>Founded in 2010, Spice Garden has been serving authentic flavors and creating memorable dining experiences for over a decade. Our chefs bring together traditional recipes with modern culinary techniques.</p>
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-leaf"></i>
+                            <h3>Fresh Ingredients</h3>
+                            <p>Sourced daily from local farms</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-heart"></i>
+                            <h3>Made with Love</h3>
+                            <p>Every dish prepared with passion</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-clock"></i>
+                            <h3>Quick Service</h3>
+                            <p>Fresh food served in minutes</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Food Gallery</h2>
+                <p class="section-subtitle">A visual feast of our delicious offerings</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="appetizers">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-hamburger"></i>
+                        <span>Appetizers</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="mains">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-drumstick-bite"></i>
+                        <span>Main Course</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="desserts">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-ice-cream"></i>
+                        <span>Desserts</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="beverages">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-coffee"></i>
+                        <span>Beverages</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Get In Touch</h2>
+                    <p>Visit us or make a reservation for an unforgettable dining experience.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Address</h4>
+                                <p>123 Food Street, Culinary District<br>Nellore, Andhra Pradesh 524001</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+91 6302258205</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>info@spicegarden.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Hours</h4>
+                                <p>Mon-Sun: 11:00 AM - 11:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <h3>Send us a Message</h3>
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Modal -->
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3><i class="fas fa-shopping-cart"></i> Your Order</h3>
+                <button class="cart-close" id="cart-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="cart-items" id="cart-items">
+                <!-- Cart items will be added here -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total: ₹<span id="cart-total">0</span></span>
+                </div>
+                <div class="cart-actions">
+                    <button class="btn btn-secondary" id="clear-cart">Clear Cart</button>
+                    <button class="btn btn-primary" id="checkout">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reservation Modal -->
+    <div class="modal" id="reservation-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-calendar-alt"></i> Book a Table</h3>
+                <button class="modal-close" id="reservation-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form class="reservation-form" id="reservation-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" id="res-name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="res-email" name="email" placeholder="Your Email" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="tel" id="res-phone" name="phone" placeholder="Phone Number" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" id="res-guests" name="guests" placeholder="Number of Guests" min="1" max="12" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="date" id="res-date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="time" id="res-time" name="time" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <textarea id="res-message" name="message" placeholder="Special Requests (Optional)" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Book Table</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-utensils"></i> Spice Garden</h3>
+                    <p>Creating memorable dining experiences with authentic flavors and exceptional service.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Food Street, Nellore</p>
+                    <p><i class="fas fa-phone"></i> +91 6302258205</p>
+                    <p><i class="fas fa-envelope"></i> info@spicegarden.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Spice Garden Restaurant. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="modern-restaurant.js"></script>
+</body>
+</html>
+
+
+
+
+
